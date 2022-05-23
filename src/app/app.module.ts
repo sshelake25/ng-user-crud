@@ -9,6 +9,9 @@ import { CreateUserComponent } from './create-user/create-user.component';
 import { MatSliderModule } from '@angular/material/slider';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { UserLoginComponent } from './user-login/user-login.component';
+import { MaterialModule } from './material.module';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -20,8 +23,10 @@ import { UserLoginComponent } from './user-login/user-login.component';
   ],
   imports: [
     BrowserModule,
-    MatSliderModule,
-    BrowserAnimationsModule 
+    BrowserAnimationsModule,
+    MaterialModule,
+    HttpClientModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
