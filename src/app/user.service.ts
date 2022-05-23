@@ -14,11 +14,14 @@ export class UserService {
 
   deleteUser(id: string) {
     return this.http.delete(`https://reqres.in/api/users/${id}`);
-
   }
 
   login(userInfo: any) {
     return this.http.post('https://reqres.in/api/login', userInfo);
+  }
+
+  createUser(userInfo: any) {
+    return this.http.post('https://reqres.in/api/users', userInfo);
   }
 
 }

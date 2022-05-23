@@ -22,6 +22,10 @@ const routes: Routes = [
     component: ListUserComponent
   },
   {
+    path: 'create',
+    component: CreateUserComponent
+  },
+  {
     path: 'login',
     component: UserLoginComponent
   }
