@@ -12,6 +12,8 @@ import { UserLoginComponent } from './user-login/user-login.component';
 import { MaterialModule } from './material.module';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { RouterModule } from '@angular/router';
     ListUserComponent,
     UserComponent,
     CreateUserComponent,
-    UserLoginComponent
+    UserLoginComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
