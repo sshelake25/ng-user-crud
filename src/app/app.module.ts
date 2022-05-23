@@ -11,9 +11,22 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { UserLoginComponent } from './user-login/user-login.component';
 import { MaterialModule } from './material.module';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+const routes: Routes = [
+  {
+    path: '',
+    component: ListUserComponent
+  },
+  {
+    path: 'login',
+    component: UserLoginComponent
+  }
+]
+
 
 @NgModule({
   declarations: [
@@ -30,7 +43,9 @@ import { FooterComponent } from './footer/footer.component';
     BrowserAnimationsModule,
     MaterialModule,
     HttpClientModule,
-    RouterModule
+    RouterModule.forRoot(routes),
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
