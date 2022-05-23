@@ -11,4 +11,10 @@ export class UserService {
   getUsers() {
    return this.http.get('https://reqres.in/api/users?page=2');
   }
+
+  deleteUser(id: string) {
+    return this.http.delete('https://reqres.in/api/users/2');
+
+  }
+
 }

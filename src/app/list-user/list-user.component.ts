@@ -11,6 +11,8 @@ export class ListUserComponent implements OnInit {
   displayedColumns: string[] = ['id', 'avatar', 'email', 'first_name', 'last_name', 'editAction', 'delAction'];
   dataSource: any;
 
+  notificationMsg = '';
+
   constructor(private userSrv: UserService) {
   }
 
@@ -21,8 +23,10 @@ export class ListUserComponent implements OnInit {
       });
   }
 
-  deleteUser(user: any) {
-    console.log(user);
+  deleteUser(userId: any) {
+    this.userSrv.deleteUser(userId).subscribe(() => {
+      this.notificationMsg = `User delete successfully ${userId}`;
+    });
   }
 
 }
