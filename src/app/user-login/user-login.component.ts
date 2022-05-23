@@ -13,8 +13,8 @@ export class UserLoginComponent implements OnInit {
   @Output() submitEM = new EventEmitter();
 
   form: FormGroup = new FormGroup({
-    email: new FormControl(''),
-    password: new FormControl(''),
+    email: new FormControl('eve.holt@reqres.in'),
+    password: new FormControl('cityslicka'),
   });
 
   constructor(private userSrv: UserService, private router: Router) { }
@@ -26,7 +26,7 @@ export class UserLoginComponent implements OnInit {
     this.userSrv.login(this.form.value)
       .subscribe(
         (res) => {
-          this.router.navigateByUrl('/')
+          this.router.navigateByUrl('/');
         });
 
   }
